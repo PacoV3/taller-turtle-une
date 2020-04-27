@@ -34,7 +34,8 @@ def get_h(side):
     return sqrt(side ** 2 - (side / 2) ** 2)
 
 t = turtle.Turtle()
-#t.ht()
+t.pensize(0.1)
+t.ht()
 t.up()
 t.speed(8)
 
@@ -43,11 +44,11 @@ h = get_h(l)
 
 t.setposition(-l / 2, -h / 2)
 t.down()
-t.shape("turtle")
-
+t.shape('turtle')
+t.st()
 n = 0
 while n < 1 or n > 7:
-  n = int(input("Elige un numero del 1 al 7: "))
+  n = int(input('Elige un numero del 1 al 7: '))
 
 t.begin_fill()
 for _ in range(3):
@@ -65,9 +66,11 @@ list_of_colors = ['yellow', 'gold', 'orange', 'red', 'maroon', 'violet', 'magent
 
 print('')
 for _ in range(len(coords)):
-  print("Vuelta numero " + str(_ + 1))
+  print('Vuelta numero ' + str(_ + 1))
   for coord in coords[_]:
     t.pencolor(choice(list_of_colors))
     draw_white_t(*coord)
-
-input()
+    
+print('')
+print('Listo!!')
+turtle.done()
