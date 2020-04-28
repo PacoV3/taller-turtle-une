@@ -70,7 +70,7 @@ for _ in range(len(coords)):
   for coord in coords[_]:
     t.pencolor(choice(list_of_colors))
     draw_white_t(*coord)
-    
 print('')
+
 print('Listo!!')
 turtle.done()

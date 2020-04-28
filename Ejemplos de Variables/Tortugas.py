@@ -4,7 +4,7 @@ from random import choice
 # Variable con una lista de posibles colores
 lista_de_colores = ['yellow', 'gold', 'orange', 'red', 'maroon', 'violet', 'magenta', 'purple', 'navy', 'blue', 'skyblue', 'cyan', 'turquoise', 'lightgreen', 'green', 'darkgreen', 'chocolate', 'brown', 'gray']
 
-radio = int(input("De que radio quieres hacer los circulos? "))
+radio = int(input("Radio para los circulos: "))
 
 t_aleatoria = turtle.Turtle()
 t_aleatoria.shape('turtle')
