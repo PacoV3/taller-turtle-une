@@ -3,42 +3,42 @@ from math import sqrt
 from random import choice
 
 def coord_list(n, len_side):
-	list_of_coords = []
+    list_of_coords = []
 
-	len_side = len_side / 2
-	list_of_coords.append([(0, 0, len_side)])
-	y_up = y_down = x_up = 0
-	for i in range(1, n):
-		len_side = len_side / 2
-		list_of_coords.append([])
+    len_side = len_side / 2
+    list_of_coords.append([(0, 0, len_side)])
+    y_up = y_down = x_up = 0
+    for i in range(1, n):
+        len_side = len_side / 2
+        list_of_coords.append([])
 
-		for element in list_of_coords[i - 1]:
-			x_up = element[0]
-			y_up = element[1] + get_h(len_side)
-			y_down = y_up - get_h(len_side) * 2
+        for element in list_of_coords[i - 1]:
+            x_up = element[0]
+            y_up = element[1] + get_h(len_side)
+            y_down = y_up - get_h(len_side) * 2
 
-			list_of_coords[i].append((x_up, y_up, len_side))
-			list_of_coords[i].append((x_up + len_side, y_down, len_side))
-			list_of_coords[i].append((x_up - len_side, y_down, len_side))
+            list_of_coords[i].append((x_up, y_up, len_side))
+            list_of_coords[i].append((x_up + len_side, y_down, len_side))
+            list_of_coords[i].append((x_up - len_side, y_down, len_side))
 
-	return list_of_coords
+    return list_of_coords
 
 def draw_white_t(x, y, l):
-	t.up()
-	t.setposition(x + l / 2, y)
-	t.down()
-	t.begin_fill()
-	for _ in range(3):
-		t.forward(l)
-		t.left(120)
-	t.end_fill()
+    t.up()
+    t.setposition(x + l / 2, y)
+    t.down()
+    t.begin_fill()
+    for _ in range(3):
+        t.forward(l)
+        t.left(120)
+    t.end_fill()
 
 def get_h(side):
-	return sqrt(side ** 2 - (side / 2) ** 2)
+    return sqrt(side ** 2 - (side / 2) ** 2)
 
 n = 0
 while n < 1 or n > 7:
-	n = int(input('Elige un numero del 1 al 7: '))
+    n = int(input('Elige un numero del 1 al 7: '))
 
 t = turtle.Turtle()
 t.pensize(0.1)
@@ -56,8 +56,8 @@ t.st()
 
 t.begin_fill()
 for _ in range(3):
-	t.forward(l)
-	t.left(120)
+    t.forward(l)
+    t.left(120)
 t.color('black')
 t.end_fill()
 
@@ -67,14 +67,14 @@ t.color('white')
 coords = coord_list(n, l)
 
 list_of_colors = ['yellow', 'gold', 'orange', 'red', 'maroon', 'violet', 'magenta', 'purple', 'navy',
-				  'blue', 'skyblue', 'cyan', 'turquoise', 'lightgreen', 'green', 'darkgreen', 'chocolate', 'brown', 'gray']
+                  'blue', 'skyblue', 'cyan', 'turquoise', 'lightgreen', 'green', 'darkgreen', 'chocolate', 'brown', 'gray']
 
 print('')
 for _ in range(len(coords)):
-	print('Vuelta numero ' + str(_ + 1))
-	for coord in coords[_]:
-		t.pencolor(choice(list_of_colors))
-		draw_white_t(*coord)
+    print('Vuelta numero ' + str(_ + 1))
+    for coord in coords[_]:
+        t.pencolor(choice(list_of_colors))
+        draw_white_t(*coord)
 print('')
 
 print('Listo!!')
