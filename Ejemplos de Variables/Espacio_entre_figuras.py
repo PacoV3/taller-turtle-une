@@ -4,11 +4,12 @@ tortuga = turtle.Turtle()
 tortuga.shape("turtle")
 tortuga.color("green")
 
-lista_colores = ["plum","salmon","dark turquoise","tan","olive drab","gold","slate blue","indigo","khaki","dark gray"]
-#Triángulo.
+lista_colores = ["plum", "salmon", "dark turquoise", "tan", "olive drab", "gold", "slate blue", "indigo", "khaki", "dark gray"]
+
+# Triángulo.
 print(lista_colores)
 print(" ")
-print("Nota: Para acceder por un elemento de la lista se debe acceder a su posicion la cual siempre empeza en cero. (0 a 9)")
+print("Nota: Para elegir un color de la lista ingresa su posicion la cual siempre empieza desde cero (en este caso del 0 al 9).")
 print(" ")
 color = int(input("Elige un color: "))
 tortuga.color(lista_colores[color])
@@ -28,7 +29,7 @@ tortuga.penup()
 tortuga.forward(200)
 tortuga.pendown()
 
-#Cuadrado
+# Cuadrado
 color = int(input("Elige un color: "))
 tortuga.color(lista_colores[color])
 
@@ -45,13 +46,11 @@ tortuga.left(90)
 
 tortuga.end_fill()
 
-
 tortuga.penup()
 tortuga.forward(200)
 tortuga.pendown()
 
-
-#Pentágono
+# Pentágono
 color = int(input("Elige un color: "))
 tortuga.color(lista_colores[color])
 

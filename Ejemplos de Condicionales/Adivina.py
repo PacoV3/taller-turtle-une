@@ -8,8 +8,8 @@ t.speed(3)
 a = 1
 b = 5
 numero = randint(a, b)
-
 respuesta = int(input("Adivina un numero del " + str(a) + " al " + str(b) + ": "))
+
 if respuesta == numero:
     t.forward(100)
     t.left(90)
